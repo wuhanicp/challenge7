@@ -414,42 +414,6 @@ body{
 }
 .toast.show{transform:translateX(-50%) translateY(0)}
 
-@media(max-width:640px){
-  .hero h1{font-size:2rem}
-  .hero-content{padding:0 1rem}
-  .hero-sub{font-size:1rem}
-  .hero-badge{font-size:.82rem;padding:6px 14px}
-  .hero-cta{padding:.8rem 1.5rem;font-size:.95rem}
-  .hero-scroll{bottom:1.2rem}
-  .intro-section,.journey-header,.appendix-section{padding:0 .5rem}
-  .intro-quote{font-size:.92rem;padding:1rem .8rem}
-  .nav{padding:.5rem .8rem}
-  .nav-brand{font-size:.82rem}
-  .progress-bar{flex-wrap:wrap;gap:6px;justify-content:center;padding:0 .5rem}
-  .progress-dot{width:28px;height:28px;font-size:.7rem}
-  .progress-line{display:none}
-  .day-nav-card-inner{padding:1rem;gap:.8rem}
-  .day-nav-card .day-number{width:40px;height:40px}
-  .day-nav-card .day-number .num{font-size:1.1rem}
-  .day-nav-card .day-number .label{font-size:.5rem}
-  .day-nav-card-info h3{font-size:.92rem}
-  .day-nav-card-info p{font-size:.78rem}
-  .day-nav-card-quote{font-size:.75rem;white-space:normal;overflow:visible}
-  .arrow-icon svg{width:16px;height:16px}
-  .tracker-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
-  .tracker-table th,.tracker-table td{font-size:.7rem;padding:.4rem .3rem;min-width:28px}
-  .tracker-table input[type="text"]{width:36px!important;font-size:14px}
-  .quick-table th,.quick-table td{font-size:.78rem;padding:.5rem .4rem}
-  .appendix-card{padding:1.2rem 1rem}
-  .appendix-section h3{font-size:1.05rem}
-  .faq-q{font-size:.88rem}
-  .faq-a{font-size:.82rem}
-  .toast{font-size:.8rem;padding:.6rem 1rem;bottom:1.2rem}
-  body{font-size:15px;-webkit-text-size-adjust:100%}
-  input[type="text"],textarea{font-size:16px}
-
-}
-
 .fade-in{opacity:0;transform:translateY(20px);transition:all .6s ease}
 .fade-in.visible{opacity:1;transform:translateY(0)}
 
@@ -497,6 +461,45 @@ body{
   color:var(--text-muted);flex-shrink:0;transition:color .3s;
 }
 .day-nav-card:hover .arrow-icon{color:var(--accent)}
+
+@media(max-width:640px){
+  .hero h1{font-size:2rem}
+  .hero-content{padding:0 1rem}
+  .hero-sub{font-size:1rem}
+  .hero-badge{font-size:.82rem;padding:6px 14px}
+  .hero-cta{padding:.8rem 1.5rem;font-size:.95rem}
+  .hero-scroll{bottom:1.2rem}
+  .intro-section,.journey-header,.appendix-section{padding:0 .5rem}
+  .intro-quote{font-size:.92rem;padding:1rem .8rem}
+  .nav{padding:.5rem .8rem;flex-wrap:wrap;gap:4px}
+  .nav-brand{font-size:.82rem;width:100%;text-align:center;margin-bottom:2px}
+  .nav-days{gap:4px;justify-content:center}
+  .nav-day{width:26px;height:26px;font-size:.6rem}
+  .progress-bar{flex-wrap:wrap;gap:6px;justify-content:center;padding:0 .5rem;max-width:100%}
+  .progress-dot{width:28px;height:28px;font-size:.7rem;flex-shrink:0}
+  .progress-line{display:none}
+  .day-nav-card-inner{padding:1rem;gap:.8rem}
+  .day-nav-card .day-number{width:40px;height:40px;flex-shrink:0}
+  .day-nav-card .day-number .num{font-size:1.1rem}
+  .day-nav-card .day-number .label{font-size:.5rem}
+  .day-nav-card-info{min-width:0;overflow:hidden}
+  .day-nav-card-info h3{font-size:.92rem;overflow-wrap:break-word;word-break:break-all}
+  .day-nav-card-info p{font-size:.78rem}
+  .day-nav-card-quote{font-size:.75rem;white-space:normal;overflow:visible;text-overflow:unset}
+  .arrow-icon{flex-shrink:0}
+  .arrow-icon svg{width:16px;height:16px}
+  .tracker-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .tracker-table th,.tracker-table td{font-size:.7rem;padding:.4rem .3rem;min-width:28px}
+  .tracker-table input[type="text"]{width:36px!important;font-size:14px}
+  .quick-table th,.quick-table td{font-size:.78rem;padding:.5rem .4rem}
+  .appendix-card{padding:1.2rem 1rem}
+  .appendix-section h3{font-size:1.05rem}
+  .faq-q{font-size:.88rem}
+  .faq-a{font-size:.82rem}
+  .toast{font-size:.8rem;padding:.6rem 1rem;bottom:1.2rem}
+  body{font-size:15px;-webkit-text-size-adjust:100%}
+  input[type="text"],textarea{font-size:16px}
+}
 </style>
 </head>
 <body>
