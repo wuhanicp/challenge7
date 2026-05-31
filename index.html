@@ -459,6 +459,42 @@ body{
   0%{opacity:1;transform:translateY(0) scale(1)}
   100%{opacity:0;transform:translateY(-60px) scale(1.3)}
 }
+
+.day-nav-card{
+  background:var(--bg-card);border-radius:var(--radius);
+  border:1px solid var(--border-light);
+  margin-bottom:1.2rem;overflow:hidden;
+  box-shadow:var(--shadow);transition:all .4s;
+  text-decoration:none;display:block;color:inherit;
+}
+.day-nav-card:hover{
+  box-shadow:var(--shadow-hover);transform:translateY(-2px);
+  border-color:var(--accent-light);
+}
+.day-nav-card-inner{
+  padding:1.5rem 2rem;display:flex;align-items:center;gap:1.2rem;
+}
+.day-nav-card .day-number{
+  width:52px;height:52px;border-radius:50%;
+  background:linear-gradient(135deg,var(--accent-glow),rgba(232,168,124,0.15));
+  border:2px solid var(--border);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.day-nav-card .day-number .label{font-size:.6rem;color:var(--text-muted);letter-spacing:1px}
+.day-nav-card .day-number .num{font-family:var(--display);font-size:1.3rem;color:var(--warm-deep);line-height:1}
+.day-nav-card-info{flex:1}
+.day-nav-card-info h3{font-size:1.05rem;color:var(--text);margin-bottom:2px}
+.day-nav-card-info p{font-size:.85rem;color:var(--text-muted);margin-bottom:4px}
+.day-nav-card-quote{
+  font-size:.82rem;color:var(--accent);font-style:italic;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+  max-width:100%;
+}
+.day-nav-card .arrow-icon{
+  color:var(--text-muted);flex-shrink:0;transition:color .3s;
+}
+.day-nav-card:hover .arrow-icon{color:var(--accent)}
 </style>
 </head>
 <body>
@@ -518,9 +554,121 @@ body{
     <h2>7天旅程</h2>
     <p>点击每一天，开启你的改变之旅</p>
   </div>
-  <div class="progress-bar" id="progressBar"></div>
+  <div class="progress-bar" id="progressBar"><div class="progress-dot" data-day="1" onclick="window.location.href='day1.html'" title="Day 1">1</div><div class="progress-line" data-line="2"></div><div class="progress-dot" data-day="2" onclick="window.location.href='day2.html'" title="Day 2">2</div><div class="progress-line" data-line="3"></div><div class="progress-dot" data-day="3" onclick="window.location.href='day3.html'" title="Day 3">3</div><div class="progress-line" data-line="4"></div><div class="progress-dot" data-day="4" onclick="window.location.href='day4.html'" title="Day 4">4</div><div class="progress-line" data-line="5"></div><div class="progress-dot" data-day="5" onclick="window.location.href='day5.html'" title="Day 5">5</div><div class="progress-line" data-line="6"></div><div class="progress-dot" data-day="6" onclick="window.location.href='day6.html'" title="Day 6">6</div><div class="progress-line" data-line="7"></div><div class="progress-dot" data-day="7" onclick="window.location.href='day7.html'" title="Day 7">7</div></div>
 
-  <div id="dayCards"></div>
+  
+    <a href="day1.html" class="day-nav-card fade-in">
+      <div class="day-nav-card-inner">
+        <div class="day-number">
+          <span class="label">DAY</span>
+          <span class="num">1</span>
+        </div>
+        <div class="day-nav-card-info">
+          <h3>看看你在这段关系里，一直在重复什么</h3>
+          <p>不着急改变，不着急行动，就是看看</p>
+          <div class="day-nav-card-quote">"有时候我们以为自己在解决问题，但其实我们在重复问题。"</div>
+        </div>
+        <div class="arrow-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4L13 10L7 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+      </div>
+    </a>
+    <a href="day2.html" class="day-nav-card fade-in">
+      <div class="day-nav-card-inner">
+        <div class="day-number">
+          <span class="label">DAY</span>
+          <span class="num">2</span>
+        </div>
+        <div class="day-nav-card-info">
+          <h3>学一句话，今晚你可能会有不一样的收获</h3>
+          <p>在你那个旧习惯蹦出来之前，先试着说一句不一样的话</p>
+          <div class="day-nav-card-quote">"有时候，不是你们之间没有爱了，而是你们忘记怎么好好说话了。"</div>
+        </div>
+        <div class="arrow-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4L13 10L7 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+      </div>
+    </a>
+    <a href="day3.html" class="day-nav-card fade-in">
+      <div class="day-nav-card-inner">
+        <div class="day-number">
+          <span class="label">DAY</span>
+          <span class="num">3</span>
+        </div>
+        <div class="day-nav-card-info">
+          <h3>看看那些你以为"为对方好"的事</h3>
+          <p>其实可能在伤害你们的关系</p>
+          <div class="day-nav-card-quote">"有时候我们以为自己在爱对方，但其实我们在用爱来控制对方。"</div>
+        </div>
+        <div class="arrow-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4L13 10L7 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+      </div>
+    </a>
+    <a href="day4.html" class="day-nav-card fade-in">
+      <div class="day-nav-card-inner">
+        <div class="day-number">
+          <span class="label">DAY</span>
+          <span class="num">4</span>
+        </div>
+        <div class="day-nav-card-info">
+          <h3>做一件让对方开心的小事</h3>
+          <p>不是为了让他/她欠你，就是单纯地想让那个人高兴一下</p>
+          <div class="day-nav-card-quote">"有时候改变关系的，不是轰轰烈烈的大事，而是那些被你忽略的小事。"</div>
+        </div>
+        <div class="arrow-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4L13 10L7 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+      </div>
+    </a>
+    <a href="day5.html" class="day-nav-card fade-in">
+      <div class="day-nav-card-inner">
+        <div class="day-number">
+          <span class="label">DAY</span>
+          <span class="num">5</span>
+        </div>
+        <div class="day-nav-card-info">
+          <h3>我想跟你说几句真心话</h3>
+          <p>走到第5天了，也许你有点累了，也许你有点怀疑</p>
+          <div class="day-nav-card-quote">"有时候我们太着急看到结果，以至于忘记了：种子一直在地下努力生长。"</div>
+        </div>
+        <div class="arrow-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4L13 10L7 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+      </div>
+    </a>
+    <a href="day6.html" class="day-nav-card fade-in">
+      <div class="day-nav-card-inner">
+        <div class="day-number">
+          <span class="label">DAY</span>
+          <span class="num">6</span>
+        </div>
+        <div class="day-nav-card-info">
+          <h3>好好看看自己这一周发生了什么</h3>
+          <p>不是评判自己，是看看：你走了多远</p>
+          <div class="day-nav-card-quote">"回顾不是为了证明自己有多好或多差，而是为了看清楚：我现在在哪里。"</div>
+        </div>
+        <div class="arrow-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4L13 10L7 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+      </div>
+    </a>
+    <a href="day7.html" class="day-nav-card fade-in">
+      <div class="day-nav-card-inner">
+        <div class="day-number">
+          <span class="label">DAY</span>
+          <span class="num">7</span>
+        </div>
+        <div class="day-nav-card-info">
+          <h3>你完成了挑战</h3>
+          <p>不管这7天发生了什么，你走到了这里，这就值得庆祝</p>
+          <div class="day-nav-card-quote">"7天只是一个开始。真正的改变，在你心里。"</div>
+        </div>
+        <div class="arrow-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4L13 10L7 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+      </div>
+    </a>
 </section>
 
 <section class="appendix" id="appendix">
@@ -548,7 +696,63 @@ body{
       <thead>
         <tr><th>日期</th><th>Day</th><th>心情</th><th>冲突</th><th>互动</th><th>冥想</th><th>打卡</th></tr>
       </thead>
-      <tbody id="trackerBody"></tbody>
+      <tbody id="trackerBody"><tr>
+      <td><input type="text" data-track="date-1" placeholder="__/__" style="width:60px"></td>
+      <td>1</td>
+      <td><input type="text" data-track="mood-1" placeholder="/10" style="width:40px"></td>
+      <td><input type="text" data-track="conflict-1" placeholder="次" style="width:36px"></td>
+      <td><input type="text" data-track="positive-1" placeholder="次" style="width:36px"></td>
+      <td><input type="text" data-track="meditate-1" placeholder="✓/✗" style="width:30px"></td>
+      <td><input type="checkbox" data-track="done-1" onchange="saveTracker()"></td>
+    </tr><tr>
+      <td><input type="text" data-track="date-2" placeholder="__/__" style="width:60px"></td>
+      <td>2</td>
+      <td><input type="text" data-track="mood-2" placeholder="/10" style="width:40px"></td>
+      <td><input type="text" data-track="conflict-2" placeholder="次" style="width:36px"></td>
+      <td><input type="text" data-track="positive-2" placeholder="次" style="width:36px"></td>
+      <td><input type="text" data-track="meditate-2" placeholder="✓/✗" style="width:30px"></td>
+      <td><input type="checkbox" data-track="done-2" onchange="saveTracker()"></td>
+    </tr><tr>
+      <td><input type="text" data-track="date-3" placeholder="__/__" style="width:60px"></td>
+      <td>3</td>
+      <td><input type="text" data-track="mood-3" placeholder="/10" style="width:40px"></td>
+      <td><input type="text" data-track="conflict-3" placeholder="次" style="width:36px"></td>
+      <td><input type="text" data-track="positive-3" placeholder="次" style="width:36px"></td>
+      <td><input type="text" data-track="meditate-3" placeholder="✓/✗" style="width:30px"></td>
+      <td><input type="checkbox" data-track="done-3" onchange="saveTracker()"></td>
+    </tr><tr>
+      <td><input type="text" data-track="date-4" placeholder="__/__" style="width:60px"></td>
+      <td>4</td>
+      <td><input type="text" data-track="mood-4" placeholder="/10" style="width:40px"></td>
+      <td><input type="text" data-track="conflict-4" placeholder="次" style="width:36px"></td>
+      <td><input type="text" data-track="positive-4" placeholder="次" style="width:36px"></td>
+      <td><input type="text" data-track="meditate-4" placeholder="✓/✗" style="width:30px"></td>
+      <td><input type="checkbox" data-track="done-4" onchange="saveTracker()"></td>
+    </tr><tr>
+      <td><input type="text" data-track="date-5" placeholder="__/__" style="width:60px"></td>
+      <td>5</td>
+      <td><input type="text" data-track="mood-5" placeholder="/10" style="width:40px"></td>
+      <td><input type="text" data-track="conflict-5" placeholder="次" style="width:36px"></td>
+      <td><input type="text" data-track="positive-5" placeholder="次" style="width:36px"></td>
+      <td><input type="text" data-track="meditate-5" placeholder="✓/✗" style="width:30px"></td>
+      <td><input type="checkbox" data-track="done-5" onchange="saveTracker()"></td>
+    </tr><tr>
+      <td><input type="text" data-track="date-6" placeholder="__/__" style="width:60px"></td>
+      <td>6</td>
+      <td><input type="text" data-track="mood-6" placeholder="/10" style="width:40px"></td>
+      <td><input type="text" data-track="conflict-6" placeholder="次" style="width:36px"></td>
+      <td><input type="text" data-track="positive-6" placeholder="次" style="width:36px"></td>
+      <td><input type="text" data-track="meditate-6" placeholder="✓/✗" style="width:30px"></td>
+      <td><input type="checkbox" data-track="done-6" onchange="saveTracker()"></td>
+    </tr><tr>
+      <td><input type="text" data-track="date-7" placeholder="__/__" style="width:60px"></td>
+      <td>7</td>
+      <td><input type="text" data-track="mood-7" placeholder="/10" style="width:40px"></td>
+      <td><input type="text" data-track="conflict-7" placeholder="次" style="width:36px"></td>
+      <td><input type="text" data-track="positive-7" placeholder="次" style="width:36px"></td>
+      <td><input type="text" data-track="meditate-7" placeholder="✓/✗" style="width:30px"></td>
+      <td><input type="checkbox" data-track="done-7" onchange="saveTracker()"></td>
+    </tr></tbody>
     </table>
     <div style="margin-top:1rem;font-size:.85rem;color:var(--text-muted);text-align:center">
       数据保存在本地浏览器中，刷新不丢失
@@ -584,402 +788,26 @@ body{
 <div class="toast" id="toast"></div>
 
 <script>
-const DAYS = [
-  {
-    num:1,
-    title:'看看你在这段关系里，一直在重复什么',
-    subtitle:'不着急改变，不着急行动，就是看看',
-    quote:'有时候我们以为自己在解决问题，但其实我们在重复问题。',
-    checks:['完成了一次冲突回顾','问了自己那几个问题','今天我对自己的行为有了新的看见'],
-    content:`
-      <div class="section">
-        <h4><span class="icon">📖</span> 今天的故事</h4>
-        <div class="story">
-          <p>小慧结婚七年，老公加班到快十一点才回来。她心里想说的是："你怎么这么晚？我担心死了。"她张了张嘴，出来的却是："你就知道加班，这个家跟你有什么关系？"</p>
-          <p>空气一下子就冻住了。接下来就是老一套——她说他不顾家，他说她不理解，越吵越凶，越吵越离题。</p>
-        </div>
-        <p>你有过类似的时刻吗？明明想表达担心，说出来变成了指责。明明想让他多陪陪你，张嘴就变成了"你从来都不"。就好像心里住着一个人，嘴上住着另一个人，两个人永远对不上话。</p>
-      </div>
-      <div class="section">
-        <h4><span class="icon">🔍</span> 为什么会这样？</h4>
-        <p>你脑子里有一个自动运行的程序，叫"旧模式"。就像一条河，水走多了，河道就固定了，以后的水来了，不用想，自动就往那条沟里流。</p>
-        <p>你用这些方式保护自己，这很正常。但讽刺的是，你用来保护自己的方式，恰恰是把伴侣推得更远的方式。你越指责，他越不想听；你越冷战，她越觉得你不爱了；你越想控制，对方越想逃。</p>
-      </div>
-      <div class="section">
-        <h4><span class="icon">⚠️</span> 三个你可能正在踩的坑</h4>
-        <div class="killer-list">
-          <div class="killer-item"><h5>坑一：以为"说清楚"就能解决问题</h5><p>"说清楚"只是把问题摆在了桌面上，但桌子底下那个让你一次次发火的旧模式，一个字都没变。</p></div>
-          <div class="killer-item"><h5>坑二：以为"忍一忍"就能风平浪静</h5><p>问题不会因为你看不见就消失。它只是被压下去了，像一口高压锅，盖子拧得越紧，里面的气压越高。</p></div>
-          <div class="killer-item"><h5>坑三：以为"让对方改"就能改变关系</h5><p>你把所有的希望都放在了对方身上。但你有没有想过——就算他真的改了，你就一定会变吗？</p></div>
-        </div>
-      </div>
-      <div class="section">
-        <h4><span class="icon">💃</span> 换一个舞步</h4>
-        <p>你和伴侣之间的关系，就像一支双人舞。你指责，他逃避；你追，他跑；你冷战，他也冷战。这是你们跳了很多年的舞。但如果——你换了一个舞步呢？</p>
-        <p>那些婚姻关系真正变好的人，往往不是"把对方治服"的人，而是"先让自己不一样"的人。你先换了舞步，他要么跟上，要么——至少你会发现，原来那个让你痛苦的"双人舞"，你可以先停下来。</p>
-      </div>
-      <div class="practice-box">
-        <h5>📝 今日练习</h5>
-        <p>1. 回想一次最近的冲突，写下：起因、你的身体反应、你说了什么、对方说了什么</p>
-        <p>2. 问自己：我真正的感受是什么？我真正想要的是什么？我用了什么方式去争取？这种方式真的让我得到了想要的吗？</p>
-        <p>⚠️ 把这次冲突的记录保存好，Day 6 我们会重新回顾</p>
-      </div>
-    `
-  },
-  {
-    num:2,
-    title:'学一句话，今晚你可能会有不一样的收获',
-    subtitle:'在你那个旧习惯蹦出来之前，先试着说一句不一样的话',
-    quote:'有时候，不是你们之间没有爱了，而是你们忘记怎么好好说话了。',
-    checks:['选了一个今晚要尝试的场景','在心里想好了要怎么说','今晚真的说了','记录了对方的反应'],
-    content:`
-      <div class="section">
-        <h4><span class="icon">📖</span> 同样一个意思，不同的说法</h4>
-        <div class="story">
-          <p>我站在厨房里，看着老公的背影，心里那股火"蹭"地一下就上来了。我想说的是："你能不能过来帮我一下？"但我嘴里蹦出来的是："你就知道玩手机！"</p>
-        </div>
-        <p>指责让对方想逃跑，请求让对方想靠近。就这么简单。可我们偏偏习惯用指责来表达需要。因为指责让人觉得自己占了上风，好像先开口求人就输了似的。但结果呢？你赢了嘴上那一句，输了整个晚上。</p>
-      </div>
-      <div class="section">
-        <h4><span class="icon">🧱</span> 三块积木句式</h4>
-        <div class="formula-box">
-          <div style="font-size:.85rem;color:var(--text-muted)">新句式</div>
-          <div class="formula">正向观察 + 我的感受 + 一个小请求</div>
-          <div class="parts">
-            <div class="part">🪟 观察：描述事实，不加评判</div>
-            <div class="part">💜 感受：说出自己的心，不猜对方的心</div>
-            <div class="part">🤲 请求：具体、小、对方马上能做到</div>
-          </div>
-        </div>
-      </div>
-      <div class="section">
-        <h4><span class="icon">💡</span> 场景练习</h4>
-        <div class="killer-list">
-          <div class="killer-item"><h5>他回家就躺沙发上</h5><p>"我看你好像挺累的，我有点心疼你，要不要先歇十分钟，然后帮我把灯泡换了？"</p></div>
-          <div class="killer-item"><h5>你发消息他一直没回</h5><p>"你今天没回我消息，我有点担心是不是出了什么事，你方便的时候跟我说一声好不好？"</p></div>
-          <div class="killer-item"><h5>他又忘记了你交代的事</h5><p>"那件事好像还没做，我有点担心会耽误，我们想想怎么下次不忘记好不好？"</p></div>
-        </div>
-      </div>
-      <div class="section">
-        <h4><span class="icon">💝</span> 三句心里话</h4>
-        <p>第一，这个句式不是套路。如果你心里想的是"我就不信这样说你还不听"，对方一定能感觉出来。</p>
-        <p>第二，不要期待百分之百成功。至少你没有制造新的冲突，这本身就是进步。</p>
-        <p>第三，如果你说不出口，没关系。今天的练习不是逼你改变，而是让你知道——还有另一种可能。</p>
-      </div>
-      <div class="practice-box">
-        <h5>📝 今日练习</h5>
-        <p>1. 选一个今晚最可能出现的场景</p>
-        <p>2. 在心里先想好你要怎么说</p>
-        <p>3. 今晚试试看，然后记录对方的反应和你自己的感受</p>
-        <p>不用三个积木全用上，哪怕只用了其中一个，也算你今天成功了</p>
-      </div>
-    `
-  },
-  {
-    num:3,
-    title:'看看那些你以为"为对方好"的事',
-    subtitle:'其实可能在伤害你们的关系',
-    quote:'有时候我们以为自己在爱对方，但其实我们在用爱来控制对方。',
-    checks:['完成了自测','找出了自己最常犯的1-3个','为每个行为想了一个替代方案','今天有没有出现这些行为'],
-    content:`
-      <div class="section">
-        <h4><span class="icon">🔪</span> 五个隐形杀手</h4>
-        <p>这些行为看起来都不是什么坏事，有的甚至看起来是"为你好"。但它们对关系的伤害，比一次大吵还深。因为大吵至少是明面上的，但这些隐形杀手是暗地里的。</p>
-      </div>
-      <div class="section">
-        <div class="killer-list">
-          <div class="killer-item"><h5>杀手一："我是为你好"</h5><p>听起来很温柔，但背后藏着一个很硬的潜台词——"你不行，你不懂，你得听我的。"没有人喜欢被这样对待。哪怕对方真的是为你好。</p></div>
-          <div class="killer-item"><h5>杀手二：翻旧账</h5><p>翻旧账的时候，你不是在解决眼前的问题，你是在用过去的事证明一个结论——"你就是这样的人"。它不是在解决问题，它是在制造绝望。</p></div>
-          <div class="killer-item"><h5>杀手三：和别人比较</h5><p>比较最伤人的地方在于——它让你看不见眼前这个人。你眼里全是"别人家的老公/老婆"，却忘了身边这个人也许不会送花，但每天早上给你热牛奶。</p></div>
-          <div class="killer-item"><h5>杀手四：冷暴力</h5><p>你以为你在等他来哄你，他以为你已经放弃了他。两个人都在等，两个人都在受伤。冷暴力让对方觉得"你不爱我"——不是"你生我的气"，而是"你根本不在乎我"。</p></div>
-          <div class="killer-item"><h5>杀手五：牺牲式付出</h5><p>当你把付出变成了一种"记账"——我做了这个，你就得还我那个——这份付出就不再纯粹了。它变成了一种交易，一种绑架。对方感受到的不是"你爱我"，而是"你在用付出绑住我"。</p></div>
-        </div>
-      </div>
-      <div class="section">
-        <h4><span class="icon">🔄</span> 替代方案</h4>
-        <div class="killer-list">
-          <div class="killer-item"><h5>以前："我是为你好"</h5><p>→ 下次试着说："我有点担心你，想听听你怎么想的"</p></div>
-          <div class="killer-item"><h5>以前：翻旧账</h5><p>→ 下次试着只说今天这一件事</p></div>
-          <div class="killer-item"><h5>以前：和别人比较</h5><p>→ 下次试着说出我真正想要什么，而不是拿别人来暗示</p></div>
-          <div class="killer-item"><h5>以前：冷暴力</h5><p>→ 下次试着说："我现在很生气，我需要冷静一下，但我不会不理你的"</p></div>
-          <div class="killer-item"><h5>以前："我都为你做了这么多了"</h5><p>→ 下次试着说："我做了这些，是因为我愿意，不是因为你欠我"</p></div>
-        </div>
-      </div>
-      <div class="practice-box">
-        <h5>📝 今日练习</h5>
-        <p>1. 找出你最常犯的1-3个"隐形杀手"</p>
-        <p>2. 为每个行为想一个替代方案</p>
-        <p>3. 观察今天有没有出现这些行为</p>
-      </div>
-    `
-  },
-  {
-    num:4,
-    title:'做一件让对方开心的小事',
-    subtitle:'不是为了让他/她欠你，就是单纯地想让那个人高兴一下',
-    quote:'有时候改变关系的，不是轰轰烈烈的大事，而是那些被你忽略的小事。',
-    checks:['做了今天的小善事','记录了他/她的反应','完成了好种子冥想'],
-    content:`
-      <div class="section">
-        <h4><span class="icon">📖</span> 一杯温水的故事</h4>
-        <div class="story">
-          <p>小林和老公的关系冷淡了大半年。那天她做了一件特别小的事——去厨房倒了一杯温水，放在客厅的茶几上。然后什么都没说，就回房间了。</p>
-          <p>第二天早上，她老公出门前突然说了一句："昨晚那杯水，谢谢。我感觉挺好的。"就这一句话，小林说她眼眶就红了。因为她突然意识到——他们之间，已经好久好久没有因为一件小事而感谢对方了。</p>
-        </div>
-      </div>
-      <div class="section">
-        <h4><span class="icon">🌱</span> 善意如何改变你</h4>
-        <p>当你开始对伴侣做"小善事"的时候，你的注意力会悄悄转移。你不再满脑子都是"他怎么这样"，而是开始注意到"原来他也有在做事"。</p>
-        <p>这个注意力的转移，本身就是一种改变。而且这种改变，不需要对方做任何事，你自己就能完成。</p>
-      </div>
-      <div class="section">
-        <h4><span class="icon">🎁</span> 今天可以做什么</h4>
-        <div class="killer-list">
-          <div class="killer-item"><h5>零成本，马上能做</h5><p>一个真诚的微笑 · 一句"今天辛苦了" · 放下手机看着对方说话 · 说一声具体的"谢谢" · 倒杯水</p></div>
-          <div class="killer-item"><h5>低成本，这两天找机会</h5><p>主动帮他/她做一件通常做的事 · 买一样爱吃的小零食 · 在朋友面前夸一夸 · 默默整理乱放的东西</p></div>
-          <div class="killer-item"><h5>再进一步</h5><p>记住他/她随口说过的一件小事 · 支持他/她的一个小爱好 · 他/她低落的时候不急着给建议，就陪着</p></div>
-        </div>
-      </div>
-      <div class="section">
-        <h4><span class="icon">🌙</span> 好种子冥想</h4>
-        <p>睡前3分钟，闭上眼睛做三次深呼吸。回想今天你做的那件"小善事"——你做的时候是什么心情？对方什么表情？把那个画面多停留一会儿。</p>
-        <p>然后在心里对自己说："愿这份善意，成为我们之间更多的温暖。"带着这种温暖的感觉，慢慢入睡。</p>
-      </div>
-      <div class="practice-box">
-        <h5>📝 今日练习</h5>
-        <p>1. 做一件让对方开心的小事</p>
-        <p>2. 记录过程和对方的反应</p>
-        <p>3. 睡前做"好种子冥想"</p>
-      </div>
-    `
-  },
-  {
-    num:5,
-    title:'我想跟你说几句真心话',
-    subtitle:'走到第5天了，也许你有点累了，也许你有点怀疑',
-    quote:'有时候我们太着急看到结果，以至于忘记了：种子一直在地下努力生长。',
-    checks:['回顾了这5天有没有"值了"的时刻','写下了最大的困惑','抄写了"亲爱的自己"','你还愿意继续吗'],
-    content:`
-      <div class="section">
-        <h4><span class="icon">💭</span> 你心里那个最大的困惑</h4>
-        <p>"我都做了这么多了，他/她怎么还是老样子？"这句话，我听过太多了。</p>
-        <p>但我想问你：你做这些事的时候，心里是不是在想——"我都做了，你为什么还不改？"当你带着"交换"的心态去做善事，它就不再是纯粹的善意了。它变成了一种筹码。</p>
-        <p>这不是善意，这是交易。而交易的问题是：一旦对方没有按你期待的方式"付款"，你就会觉得亏了。</p>
-      </div>
-      <div class="section">
-        <h4><span class="icon">🌱</span> 种子的故事</h4>
-        <p>你种过东西吗？种子种下去之后，不会第二天就冒出来。你浇了水，施了肥，第二天跑去看，土还是那片土。但它没有坏。它在地底下悄悄地生长。先长根，再发芽。</p>
-        <p>你现在对伴侣做的那些事，就像在给种子浇水。你看不到变化，不代表种子没在生长。</p>
-      </div>
-      <div class="section">
-        <h4><span class="icon">💌</span> 亲爱的自己</h4>
-        <div class="golden-quote" style="text-align:left;font-style:normal;font-size:.95rem;line-height:2">
-          亲爱的自己：<br><br>
-          这5天你做得很好。不是因为你改变了谁，而是因为你选择了面对问题。<br><br>
-          我知道你有时候会怀疑，做了这么多到底有没有用。我也知道你有时候会委屈，凭什么是我先改。这些感受都是真实的。<br><br>
-          但我想提醒你——种子已经种下了。你看不见它，不代表它不存在。它在地下，在你看不见的地方，正在悄悄生长。<br><br>
-          继续浇水吧。不是为了等一个确定的结果，而是因为这是你想成为的那个人。<br><br>
-          无论最后发生什么，你已经比5天前的自己更好了。这就够了。
-        </div>
-      </div>
-      <div class="practice-box">
-        <h5>📝 今日练习</h5>
-        <p>1. 回顾这5天，有没有哪个时刻让你觉得"值了"？</p>
-        <p>2. 写下你现在最大的困惑</p>
-        <p>3. 把"亲爱的自己"那段话抄写一遍</p>
-        <p>⚠️ 今天不做最终决定，Day 7 我们会再问一次</p>
-      </div>
-    `
-  },
-  {
-    num:6,
-    title:'好好看看自己这一周发生了什么',
-    subtitle:'不是评判自己，是看看：你走了多远',
-    quote:'回顾不是为了证明自己有多好或多差，而是为了看清楚：我现在在哪里。',
-    checks:['填写了一周数据','回顾了Day 1的冲突','写下了三个发现','制定了下周计划','写了一段话给未来的自己'],
-    content:`
-      <div class="section">
-        <h4><span class="icon">👏</span> 你还在</h4>
-        <p>走到第六天了。说实话，能走到这里的人，比你以为的少得多。但你没有。你还在。光是这件事，就值得你对自己说一声：我挺厉害的。</p>
-      </div>
-      <div class="section">
-        <h4><span class="icon">📊</span> 一周数据回顾</h4>
-        <p>翻翻前几天的打卡记录，把下面这些数字填上。如果哪天忘了记，凭印象填一个大概的也行。</p>
-        <div class="killer-list">
-          <div class="killer-item"><h5>心情评分（1-10分）</h5><p>1-3：经常想哭或发火，几乎无法正常生活<br>4-5：大部分时间不舒服，但还能撑着<br>6-7：有不舒服也有平静，总体还能过<br>8-10：大部分时间平静或开心</p></div>
-        </div>
-        <p>📊 参考数据：完成7天挑战的学员中，心情平均分从 Day 1 的 4.2 分上升到 Day 7 的 6.1 分。</p>
-      </div>
-      <div class="section">
-        <h4><span class="icon">🔍</span> 回顾 Day 1 的冲突</h4>
-        <p>Day 1 你回顾了一次冲突，现在重新回答同样的问题。不是修改原来的答案，而是在旁边写上现在的答案，然后对比两次的差异。</p>
-        <p>人对冲突的记忆会随时间变化。刚吵完的时候，你满脑子都是"他太过分了"。过几天再回头看，你可能会发现"其实我也有一部分责任"。</p>
-      </div>
-      <div class="section">
-        <h4><span class="icon">✨</span> 三个发现</h4>
-        <div class="killer-list">
-          <div class="killer-item"><h5>发现1：我最强的那个问题模式</h5><p>这周你有没有注意到自己最常犯的那个"隐形杀手"？</p></div>
-          <div class="killer-item"><h5>发现2：最有用的一招</h5><p>这五天里，有没有哪个方法你觉得特别有用？找到它，记住它，继续用。</p></div>
-          <div class="killer-item"><h5>发现3：最大的惊喜</h5><p>这一周，有没有发生一件你没想到的事？不管多小，都是真实的。</p></div>
-        </div>
-      </div>
-      <div class="practice-box">
-        <h5>📝 今日练习</h5>
-        <p>1. 填写一周心情数据（对照锚定描述打分）</p>
-        <p>2. 回顾 Day 1 的冲突，对比两次答案的差异</p>
-        <p>3. 写下三个发现</p>
-        <p>4. 制定下周计划：继续坚持的 / 想改进的 / 想尝试的</p>
-        <p>5. 写一段话给一周后的自己</p>
-      </div>
-    `
-  },
-  {
-    num:7,
-    title:'你完成了挑战',
-    subtitle:'不管这7天发生了什么，你走到了这里，这就值得庆祝',
-    quote:'7天只是一个开始。真正的改变，在你心里。',
-    checks:['完成了这7天的挑战','写下了我的故事','选好了下一步','我承诺：我还会继续成长'],
-    content:`
-      <div class="section">
-        <h4><span class="icon">🤗</span> 先抱抱自己</h4>
-        <p>伸出双臂，环抱住自己。用力一点。因为你在拥抱的那个人，确实很重要。那是7天前决定开始这个挑战的你，是每天坚持打卡的你，是忍不住发了火又后悔但还是没有放弃的你。</p>
-        <p>跟自己说一声："我做到了。"你值得为自己骄傲。</p>
-      </div>
-      <div class="section">
-        <h4><span class="icon">🏆</span> 成就解锁</h4>
-        <div class="killer-list">
-          <div class="killer-item"><h5>🧘 觉察者</h5><p>你回想过一次冲突，问过自己"我真正想要的是什么"。很多人活了半辈子，从来没问过自己这个问题。</p></div>
-          <div class="killer-item"><h5>⚡ 行动派</h5><p>你用一种不一样的方式说了一句话。也许你只试了一次，也许你说的时候声音都在发抖，但你试了。</p></div>
-          <div class="killer-item"><h5>🌱 播种者</h5><p>你做了一件让对方开心的事，不求回报。你播下了一颗善意的种子。</p></div>
-          <div class="killer-item"><h5>💪 坚持者</h5><p>你没有半途而废。也许中间有几天你差点放弃了，但你还是回来了。</p></div>
-          <div class="killer-item"><h5>📝 复盘官</h5><p>你回头看了看这一周，看到了自己的数据，写下了发现。你没有糊里糊涂地走完。</p></div>
-        </div>
-      </div>
-      <div class="section">
-        <h4><span class="icon">🛤️</span> 下一步选择</h4>
-        <div class="killer-list">
-          <div class="killer-item"><h5>选择一：自己继续</h5><p>你已经有了你需要的一切。把这些方法继续用下去就好。很多人就是靠这几个简单的方法，慢慢地把关系走回了正轨。</p></div>
-          <div class="killer-item"><h5>选择二：升级21天深度版</h5><p>7天是入门，21天是扎根。深度版会有更详细的方法拆解，更多真实的案例故事，还有老师的陪伴和指导。</p></div>
-          <div class="killer-item"><h5>选择三：1对1咨询</h5><p>有些事情文字说不透，需要一个人听你说，陪你理一理。不是因为你有什么"问题"，而是每段关系都是独特的。</p></div>
-        </div>
-      </div>
-      <div class="practice-box">
-        <h5>📝 今日练习</h5>
-        <p>1. 写下你的7天故事：参加之前的问题、最大的变化、最有感触的一天</p>
-        <p>2. 选择你的下一步</p>
-        <p>3. 对自己承诺：我还会继续成长</p>
-      </div>
-    `
-  }
-];
+var DAY_NUMS = [1,2,3,4,5,6,7];
+var DAY_CHECK_COUNTS = {"1":3,"2":4,"3":4,"4":3,"5":4,"6":5,"7":4};
 
 function init(){
-  renderProgress();
-  renderDayCards();
-  renderTracker();
   initScrollObserver();
   initNavScroll();
   loadCheckState();
-}
-
-function renderProgress(){
-  const bar=document.getElementById('progressBar');
-  let html='';
-  DAYS.forEach((d,i)=>{
-    if(i>0) html+=`<div class="progress-line" data-line="${i}"></div>`;
-    html+=`<div class="progress-dot" data-day="${d.num}" onclick="scrollToDay(${d.num})" title="Day ${d.num}">${d.num}</div>`;
-  });
-  bar.innerHTML=html;
-}
-
-function renderDayCards(){
-  const container=document.getElementById('dayCards');
-  let html='';
-  DAYS.forEach(d=>{
-    html+=`
-    <div class="day-card fade-in" id="day-${d.num}" data-day="${d.num}">
-      <div class="day-card-header" onclick="toggleDay(${d.num})">
-        <div class="day-number">
-          <span class="label">DAY</span>
-          <span class="num">${d.num}</span>
-        </div>
-        <div class="day-card-title">
-          <h3>${d.title}</h3>
-          <p>${d.subtitle}</p>
-        </div>
-        <div class="day-card-toggle">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        </div>
-      </div>
-      <div class="day-card-body">
-        <div class="day-card-content">
-          ${d.content}
-          <div class="golden-quote">${d.quote}</div>
-          <div class="checklist">
-            <h5>✅ 今日打卡</h5>
-            ${d.checks.map((c,ci)=>`
-              <label class="check-item">
-                <input type="checkbox" data-day="${d.num}" data-check="${ci}" onchange="onCheck(${d.num},${ci},this)">
-                <span>${c}</span>
-              </label>
-            `).join('')}
-          </div>
-        </div>
-      </div>
-    </div>`;
-  });
-  container.innerHTML=html;
-}
-
-function renderTracker(){
-  const body=document.getElementById('trackerBody');
-  let html='';
-  for(let i=1;i<=7;i++){
-    html+=`<tr>
-      <td><input type="text" data-track="date-${i}" placeholder="__/__" style="width:60px"></td>
-      <td>${i}</td>
-      <td><input type="text" data-track="mood-${i}" placeholder="/10" style="width:40px"></td>
-      <td><input type="text" data-track="conflict-${i}" placeholder="次" style="width:36px"></td>
-      <td><input type="text" data-track="positive-${i}" placeholder="次" style="width:36px"></td>
-      <td><input type="text" data-track="meditate-${i}" placeholder="✓/✗" style="width:30px"></td>
-      <td><input type="checkbox" data-track="done-${i}" onchange="saveTracker()"></td>
-    </tr>`;
-  }
-  body.innerHTML=html;
+  updateProgress();
   loadTracker();
 }
 
-function toggleDay(num){
-  const card=document.getElementById('day-'+num);
-  const wasOpen=card.classList.contains('open');
-  card.classList.toggle('open');
-  if(!wasOpen){
-    setTimeout(()=>{
-      card.scrollIntoView({behavior:'smooth',block:'start'});
-    },100);
-  }
-  updateProgress();
-}
-
-function scrollToDay(num){
-  const card=document.getElementById('day-'+num);
-  if(!card.classList.contains('open')){
-    card.classList.add('open');
-  }
-  setTimeout(()=>{
-    card.scrollIntoView({behavior:'smooth',block:'start'});
-  },50);
-  updateProgress();
-}
-
 function updateProgress(){
-  const state=getCheckState();
-  DAYS.forEach(d=>{
-    const checks=state[d.num]||[];
-    const allChecked=d.checks.length>0&&checks.length===d.checks.length;
-    const dot=document.querySelector(`.progress-dot[data-day="${d.num}"]`);
-    const line=document.querySelector(`.progress-line[data-line="${d.num}"]`);
-    const navDay=document.querySelector(`.nav-day[data-day="${d.num}"]`);
+  var state=getCheckState();
+  DAY_NUMS.forEach(function(num){
+    var checkCount=DAY_CHECK_COUNTS[num];
+    var dayChecks=state[num]||[];
+    var allChecked=checkCount>0&&dayChecks.length===checkCount;
+    var dot=document.querySelector('.progress-dot[data-day="'+num+'"]');
+    var line=document.querySelector('.progress-line[data-line="'+num+'"]');
+    var navDay=document.querySelector('.nav-day[data-day="'+num+'"]');
     if(dot){
       dot.classList.remove('active','completed');
       if(allChecked) dot.classList.add('completed');
@@ -992,101 +820,59 @@ function updateProgress(){
   });
 }
 
-function onCheck(day,checkIndex,el){
-  const state=getCheckState();
-  if(!state[day]) state[day]=[];
-  if(el.checked){
-    if(!state[day].includes(checkIndex)) state[day].push(checkIndex);
-    spawnSeed(el);
-  }else{
-    state[day]=state[day].filter(i=>i!==checkIndex);
-  }
-  localStorage.setItem('challenge7_checks',JSON.stringify(state));
-  updateProgress();
-  const dayData=DAYS.find(d=>d.num===day);
-  if(dayData&&state[day]&&state[day].length===dayData.checks.length){
-    showToast(`🎉 Day ${day} 打卡完成！`);
-  }
-}
-
 function getCheckState(){
   try{return JSON.parse(localStorage.getItem('challenge7_checks'))||{}}catch(e){return{}}
 }
+
 function loadCheckState(){
-  const state=getCheckState();
-  document.querySelectorAll('.check-item input[type="checkbox"]').forEach(cb=>{
-    const day=parseInt(cb.dataset.day);
-    const check=parseInt(cb.dataset.check);
-    if(state[day]&&state[day].includes(check)){
-      cb.checked=true;
-    }
-  });
   updateProgress();
 }
 
 function saveTracker(){
-  const data={};
-  document.querySelectorAll('[data-track]').forEach(el=>{
-    const key=el.dataset.track;
+  var data={};
+  document.querySelectorAll('[data-track]').forEach(function(el){
+    var key=el.dataset.track;
     if(el.type==='checkbox') data[key]=el.checked;
     else data[key]=el.value;
   });
   localStorage.setItem('challenge7_tracker',JSON.stringify(data));
 }
+
 function loadTracker(){
   try{
-    const data=JSON.parse(localStorage.getItem('challenge7_tracker'))||{};
-    document.querySelectorAll('[data-track]').forEach(el=>{
-      const key=el.dataset.track;
+    var data=JSON.parse(localStorage.getItem('challenge7_tracker'))||{};
+    document.querySelectorAll('[data-track]').forEach(function(el){
+      var key=el.dataset.track;
       if(data[key]!==undefined){
         if(el.type==='checkbox') el.checked=data[key];
         else el.value=data[key];
       }
     });
   }catch(e){}
-  document.querySelectorAll('[data-track]').forEach(el=>{
+  document.querySelectorAll('[data-track]').forEach(function(el){
     el.addEventListener('input',saveTracker);
     el.addEventListener('change',saveTracker);
   });
 }
 
-function spawnSeed(el){
-  const rect=el.getBoundingClientRect();
-  const seed=document.createElement('div');
-  seed.className='seed-animation';
-  seed.textContent='🌱';
-  seed.style.left=(rect.left+rect.width/2)+'px';
-  seed.style.top=(rect.top)+'px';
-  document.body.appendChild(seed);
-  setTimeout(()=>seed.remove(),2000);
-}
-
-function showToast(msg){
-  const t=document.getElementById('toast');
-  t.textContent=msg;
-  t.classList.add('show');
-  setTimeout(()=>t.classList.remove('show'),2500);
-}
-
 function initScrollObserver(){
-  const obs=new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
       if(e.isIntersecting) e.target.classList.add('visible');
     });
   },{threshold:0.1});
-  document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+  document.querySelectorAll('.fade-in').forEach(function(el){obs.observe(el)});
 }
 
 function initNavScroll(){
-  const nav=document.getElementById('nav');
-  const navDays=document.getElementById('navDays');
-  let html='';
-  DAYS.forEach(d=>{
-    html+=`<div class="nav-day" data-day="${d.num}" onclick="scrollToDay(${d.num})">${d.num}</div>`;
+  var nav=document.getElementById('nav');
+  var navDays=document.getElementById('navDays');
+  var html='';
+  DAY_NUMS.forEach(function(num){
+    html+='<div class="nav-day" data-day="'+num+'" onclick="window.location.href=\'day'+num+'.html\'">'+num+'</div>';
   });
   navDays.innerHTML=html;
-
-  window.addEventListener('scroll',()=>{
+  window.addEventListener('scroll',function(){
     if(window.scrollY>400) nav.classList.add('visible');
     else nav.classList.remove('visible');
   });
