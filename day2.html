@@ -215,24 +215,24 @@ body{
   padding:0 2rem 2rem;
   border-top:1px solid var(--border-light);
 }
-.day-card-content .section{
+.day-content .section{
   margin-top:1.5rem;
 }
-.day-card-content .section h4{
+.day-content .section h4{
   font-size:1rem;color:var(--warm-deep);margin-bottom:.8rem;
   display:flex;align-items:center;gap:8px;
 }
-.day-card-content .section h4 .icon{font-size:1.1rem}
-.day-card-content .section p{
+.day-content .section h4 .icon{font-size:1.1rem}
+.day-content .section p{
   color:var(--text-light);font-size:.92rem;margin-bottom:.8rem;
   text-indent:2em;line-height:1.9;
 }
-.day-card-content .story{
+.day-content .story{
   background:rgba(196,112,63,0.04);border-radius:var(--radius-sm);
   padding:1.2rem 1.5rem;margin:1rem 0;
   border-left:3px solid var(--accent-light);
 }
-.day-card-content .story p{text-indent:2em}
+.day-content .story p{text-indent:2em}
 .golden-quote{
   text-align:center;padding:1.5rem;margin:1.5rem 0;
   background:linear-gradient(135deg,var(--accent-glow),rgba(232,168,124,0.08));
@@ -416,36 +416,38 @@ body{
 
 @media(max-width:640px){
   .hero h1{font-size:2rem}
-  .day-card-header{padding:1.2rem 1.2rem;gap:.8rem}
-  .day-card-content{padding:0 1.2rem 1.5rem}
-  .day-number{width:44px;height:44px}
-  .formula-box .parts{flex-direction:column;align-items:center}
-  .nav-days{gap:4px}
-  .nav-day{width:24px;height:24px;font-size:.6rem}
-  .hero-content{padding:0 1.2rem}
-  .hero-sub{font-size:1rem}
-  .hero-badge{font-size:.85rem}
-  .hero-cta{padding:.9rem 2rem;font-size:1rem}
-  .hero-scroll{bottom:1.5rem}
-  .intro-section,.journey-header,.appendix-section{padding:0 .2rem}
-  .intro-quote{font-size:.95rem;padding:1.2rem 1rem}
-  .formula-box{padding:1.2rem}
-  .formula-box .label{font-size:.75rem}
-  .formula-box .symbol{font-size:1.2rem}
-  .check-item{padding:.7rem .8rem}
-  .check-item .label{font-size:.9rem}
-  .method-tag{font-size:.75rem;padding:.3rem .7rem}
-  .story-box,.practice-box,.insight-box{padding:1rem}
-  .story-box p,.practice-box p,.insight-box p{font-size:.92rem}
-  .tracker-table th,.tracker-table td{font-size:.75rem;padding:.5rem .4rem}
-  .appendix-section h3{font-size:1.15rem}
-  .nav{padding:.6rem .8rem}
-  .nav-brand{font-size:.85rem}
-  .progress-bar{height:3px}
-  .day-card{margin-bottom:1rem}
-  .toast{font-size:.82rem;padding:.7rem 1.2rem;bottom:1.5rem}
+  .day-content{padding:1.2rem .8rem 2rem}
+  .day-content .day-hero h1{font-size:1.15rem}
+  .day-content .day-hero .day-num{font-size:2rem}
+  .day-content .day-hero .day-subtitle{font-size:.85rem}
+  .day-content .section h4{font-size:.9rem}
+  .day-content .section p{font-size:.88rem;text-indent:1.5em;line-height:1.8}
+  .day-content .story{padding:.7rem .8rem;margin:.8rem 0}
+  .day-content .story p{text-indent:1.5em}
+  .killer-item{padding:.6rem .8rem}
+  .killer-item h5{font-size:.85rem}
+  .killer-item p{font-size:.82rem;text-indent:1.5em}
+  .golden-quote{font-size:.88rem;padding:1rem .8rem}
+  .checklist h5{font-size:.85rem}
+  .check-item{padding:.55rem .6rem}
+  .check-item span{font-size:.82rem}
+  .practice-box{padding:.7rem .8rem}
+  .practice-box h5{font-size:.85rem}
+  .practice-box p{font-size:.82rem;text-indent:0}
+  .formula-box{padding:.8rem}
+  .formula-box .formula{font-size:.9rem}
+  .formula-box .part{font-size:.82rem}
+  .day-top-nav{padding:.5rem .8rem}
+  .day-top-nav .day-label{font-size:.9rem}
+  .day-top-nav .back-link{font-size:.85rem}
+  .day-bottom-nav{padding:.8rem}
+  .day-bottom-nav .nav-btn{padding:8px 14px;font-size:.8rem}
+  .nav{padding:.5rem .8rem}
+  .nav-brand{font-size:.82rem}
+  .toast{font-size:.8rem;padding:.6rem 1rem;bottom:1.2rem}
   body{font-size:15px;-webkit-text-size-adjust:100%}
   input[type="text"],textarea{font-size:16px}
+
 }
 
 .fade-in{opacity:0;transform:translateY(20px);transition:all .6s ease}
